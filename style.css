@@ -1,0 +1,347 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    padding: 0;
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+    background-image: url("./imagenes/background-puntos.svg");
+}
+#header{
+    color: white;
+    text-shadow: 2px 2px 3px rgba(0,0,0,0.5);
+    height: 594px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-image: url("./imagenes/mountain-bike-portada-mobile.jpg");
+    background-size: cover;
+    
+}
+@media (min-width: 769px){
+    #header{
+        text-shadow:  1px 1px 5px rgba(0,0,0,0.5);
+        height: 80vh;
+        background-image: url("./imagenes/mountain-bike-portada.jpg");
+        background-position: center;
+    }
+}
+#barra-nav{
+    display: flex;
+    align-items: center;
+    padding:1rem 2rem;
+    justify-content: space-between;
+    text-shadow: none;
+}
+@media (min-width: 769px){
+    #barra-nav{
+        background-color: white;
+        padding: 2rem 3rem;
+    }
+}
+#logo-arg-mtb{
+    max-width: 5rem;
+    border: solid black;
+    border-radius: 100px;
+}
+@media (min-width: 769px){
+    #logo-arg-mtb{
+        max-width: 8rem;
+    }
+}
+#icono-hamburguesa{
+    width: 50px;
+    height: 50px;
+    cursor:pointer;
+}
+
+
+@media (min-width: 769px){
+    #icono-hamburguesa{
+        display: none;
+    }
+}
+
+.menu-con-nombres{
+    display: none;
+}
+@media (min-width: 769px){
+    .menu-con-nombres{
+        width: 428px;
+        display: flex;
+        justify-content: space-between;
+    }
+}
+.links-nav{
+    font-size: 24px;
+    font-family: 'Roboto', sans-serif; 
+    font-weight: 700;
+    text-decoration: none;
+    color: black;
+}
+#seccion-bienvenida{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 80%;
+}
+@media (min-width: 769px){
+    #seccion-bienvenida{
+        padding: 0 5%;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+}
+#titulo-de-bienvenida{
+    font-size: 5vh;
+    text-align: center;
+}
+@media (min-width: 769px){
+    #titulo-de-bienvenida{
+        font-size: 5vw;
+        text-align: center;
+    }
+}
+
+#subtitulo{
+    font-size: 3vh;
+    text-align: center;
+}
+@media (min-width: 769px){
+    #subtitulo{
+        font-size: 2vw;
+        text-align: end;
+    }
+}
+.gordon-freeman{
+    width: 318px;
+    height: 300px;
+}
+@media (min-width: 769px){
+    .gordon-freeman{
+        width: 435px;
+        height: 395px;
+    }
+}
+.seccion-biografia{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    background-color: black;
+    padding: 25px;
+    height: 50%;
+}
+@media (min-width: 769px){
+    .seccion-biografia{
+        min-height: 5;
+        flex-direction: row-reverse;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+}
+.biografia{
+    margin: 10px 0;
+    color: white;
+    padding: 32px;
+    text-align: center;
+}
+@media (min-width: 769px){
+    .biografia{
+        padding: 0;
+        max-width: 532px;
+        justify-content: center;
+    }
+}
+    
+.soy-gordon{
+    margin: 0;
+    text-align: center;
+    font-size: 32px;
+    font-weight: 700;
+    color: orangered
+}
+@media (min-width: 769px){
+    .soy-gordon{
+        margin:0 0 20px 90px;
+        text-align: start;
+    }
+}
+
+#ciclistas-imagen{
+    width: 25vw;
+    height: 25vw;
+    border: solid orangered;
+    margin: 0 auto;
+}
+@media (min-width: 769px){
+    #ciclistas-imagen{
+        width: 30vh;
+        height: 30vh;
+        margin: 0;
+    }
+}
+.seccion-servicios{
+    background-color: #FAFAFA;
+    padding: 66px 0;
+}
+@media (min-width: 769px){
+    .seccion-servicios{
+        height: 604px;
+        padding: 0;
+    }
+}
+
+.mis-servicios{
+    margin-bottom: 45px;
+    text-align: center;
+    font-size: 32px;
+    font-weight: 700;
+    color: #2C2C2C;
+}
+@media (min-width: 769px){
+    .mis-servicios{
+        font-size: 48px;
+    }
+}
+.contenedor-servicios{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+@media (min-width: 769px){
+    .contenedor-servicios{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+}
+.servicio{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    padding: 55.5px 57px;
+}
+.titulo-cosas{
+    font-weight: 700;
+    font-size: 24px;
+}
+.logo-lambda{
+    width: 110px;
+    height: 110px;
+}
+.formulario{
+    color: white;
+    background-color: black;
+    height: 660px;
+    padding: 70px 20px;
+}
+@media (min-width: 769px){
+    .formulario{
+       display: grid;
+       grid-template-columns: 45% 55%;
+       grid-template-rows: 1fr;
+       justify-content: center;
+    }
+}
+.titulo-formulario{
+    text-align: center;
+    font-weight: 700;
+    font-size: 32px;
+    padding-bottom: 26px;
+    margin: 0;
+}
+@media (min-width: 769px){
+    .titulo-formulario{
+        text-align: end;
+        font-size: 48px;
+        padding-right: 77px;
+       
+    }
+}
+.fieldset{
+    margin-bottom: 27px 
+}
+.label{
+    display: block;
+    
+}
+.input{
+    width: 100%;
+    height: 45px;
+    border: #2C2C2C solid;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+}
+.textarea{
+    width: 100%;
+    height: 113px;
+    border: #2C2C2C solid;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+}
+.boton-envio{
+    margin-top: 60px;
+    background-color: orangered;
+    width: 100%;
+    height: 45px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    border: #2C2C2C solid;
+    border-radius: 7px;
+}
+@media (min-width: 769px){
+    .input,.textarea,.boton-envio{
+        min-width: 300px;
+        width: 50%;
+    }
+}
+.footer{
+    background-color: #eeee;
+    height: 493px;;
+    padding-left: 20px;
+}
+@media (min-width: 769px){
+    .footer{
+        background: none;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+.logo-final{
+    padding: 53px 0;
+    margin-bottom: 85px;
+}
+@media (min-width: 769px){
+    .logo-final{
+      padding-left:100px;
+      margin: 0;
+    }
+}
+.logo-footer{
+    width: 70px;
+    height: 70px;
+}
+@media (min-width: 769px){
+    .logo-footer{
+        width: 110px;
+        height: 110px;
+
+    }
+}
+.derechos-de-autor{
+    font-size: 13px;
+}
+.redes{
+    margin-right:12% ;
+}
