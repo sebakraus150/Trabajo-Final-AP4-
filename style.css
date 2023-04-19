@@ -1,101 +1,141 @@
 *{
-    box-sizing: border-box;
     padding: 0;
     margin: 0;
-}
-html{
+    box-sizing: border-box;
     scroll-behavior: smooth;
 }
-body{
-    padding: 0;
-    margin: 0;
-    font-family: 'Open Sans', sans-serif;
-    background-image: url("./imagenes/background-puntos.svg");
+.no-scroll{
+    overflow: hidden;
 }
 #header{
-    color: white;
-    text-shadow: 2px 2px 3px rgba(0,0,0,0.5);
-    height: 594px;
+    width: 100%;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    background-image: url("./imagenes/mountain-bike-portada-mobile.jpg");
-    background-size: cover;
-    
-}
-@media (min-width: 769px){
-    #header{
-        text-shadow:  1px 1px 5px rgba(0,0,0,0.5);
-        height: 80vh;
-        background-image: url("./imagenes/mountain-bike-portada.jpg");
-        background-position: center;
-    }
-}
-#barra-nav{
-    display: flex;
-    align-items: center;
-    padding:1rem 2rem;
+    padding: 1rem 3rem;
     justify-content: space-between;
-    text-shadow: none;
+    align-items: center;
 }
-@media (min-width: 769px){
-    #barra-nav{
-        background-color: white;
-        padding: 2rem 3rem;
-    }
+#boton-logo{
+    background: none;
+    border: none;
+    cursor: pointer;
 }
 #logo-arg-mtb{
-    max-width: 5rem;
-    border: solid black;
-    border-radius: 100px;
+width: 5rem;
 }
-@media (min-width: 769px){
-    #logo-arg-mtb{
-        max-width: 8rem;
-    }
+#boton-menu, #boton-cierre{
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+#boton-cierre{
+    font-size: 3rem;
+    display: inline;
+    filter: invert(1);
+    display: none;
 }
 #icono-hamburguesa{
-    width: 50px;
-    height: 50px;
-    cursor:pointer;
+    width: 2rem;
 }
+#icono-de-cierre{
+    font-size: 3rem;
+}
+#abrir-menu{
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 1000vh;
+    background-color: #272727;
+    box-shadow: 0 0 0 100vmax rgba(0, 0, 0, .5);
+}
+nav{
+    display: none;
+}
+@media (min-width: 750px) {
+    nav{
+        display: flex;
 
+    }
+}
+.nav{
+    width: 50vh;
+    opacity: 1;
+}
+.nav-abierto{
+    display: none;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 3rem 0;
+    /*cambiar esto */
+    width: 60%;
+}
+@media (min-width: 750px) {
+    .nav{
+        display: flex;
 
-@media (min-width: 769px){
-    #icono-hamburguesa{
+    }
+}
+@media (min-width: 750px) {
+    #boton-menu{
         display: none;
     }
 }
-
-.menu-con-nombres{
+#menu-con-nombres{
     display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    list-style-type: none;
 }
-@media (min-width: 769px){
-    .menu-con-nombres{
-        width: 428px;
+@media (min-width: 750px) {
+    #menu-con-nombres{
         display: flex;
         justify-content: space-between;
+        flex-direction: row;
+        width: 50vh;
     }
 }
-.links-nav{
-    font-size: 24px;
-    font-family: 'Roboto', sans-serif; 
-    font-weight: 700;
-    text-decoration: none;
-    color: black;
+.li-link{
+    padding: 2rem 0;
+    text-align: center;
 }
+.a-link{
+    width: 100%;
+    text-decoration: none;
+    font-size: 1.5rem;
+    color: white;
+    margin-top: 2rem;
+}
+
+@media (min-width: 750px) {
+    .a-link{
+        width: 100%;
+        text-decoration: none;
+        font-size: 1.5rem;
+        color: black;
+        margin-top: 2rem;
+    }
+}
+
 #seccion-bienvenida{
+    background-image: url("./imagenes/mountain-bike-portada-mobile.jpg");
+    height: 60vh;
+    background-size: cover;
+    color: white;
+    text-shadow: 2px 2px 3px rgba(0,0,0,0.5);
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
-    height: 80%;
+    justify-content: space-evenly;
+    background-repeat: no-repeat;
 }
 @media (min-width: 769px){
     #seccion-bienvenida{
-        padding: 0 5%;
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-between;
+        text-shadow:  1px 1px 5px rgba(0,0,0,0.5);
+        background-image: url("./imagenes/mountain-bike-portada.jpg");
+        background-position: center;
+        height: 80vh;
+
     }
 }
 #titulo-de-bienvenida{
@@ -104,19 +144,19 @@ body{
 }
 @media (min-width: 769px){
     #titulo-de-bienvenida{
-        font-size: 5vw;
+        font-size: 9vh;
         text-align: center;
     }
 }
-
 #subtitulo{
     font-size: 3vh;
     text-align: center;
 }
+
 @media (min-width: 769px){
     #subtitulo{
-        font-size: 2vw;
-        text-align: end;
+        font-size: 5vh;
+        text-align: center;
     }
 }
 .gordon-freeman{

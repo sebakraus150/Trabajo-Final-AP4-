@@ -1,38 +1,46 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Argen MTB</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Argen MTB</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="https://kit.fontawesome.com/6d0f0374c4.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <nav id="barra-nav">
-        <img src="./imagenes/logo.png" alt="logo-de-la-empresa" id="logo-arg-mtb">
-        <img src="./imagenes/bars-solid.svg" alt="icono-de-menu" id="icono-hamburguesa">
-        <div class="menu-con-nombres">
-            <a href="#soy-gordon"  class="links-nav">Quien somos</a>
-            <a href="#mis-servicios" class="links-nav">Servicios</a>
-            <a href="#escribime" class="links-nav">Contactamos</a>
-        </div>
-    </nav>
     <header id="header">
-        <section id="seccion-bienvenida">
-            <h1 id="titulo-de-bienvenida">Bienvenidos a nuesto landing page</h1>
-            <h2 id="subtitulo">Los mejores de Argentina en mountain biking</h2>
-        </section>
+        <button id="boton-logo">
+            <img src="./imagenes/logo.png" alt="logo-de-la-empresa" id="logo-arg-mtb">
+        </button>
+        <button id="boton-menu" onclick="abrirMenu()">
+            <img src="./imagenes/bars-solid.svg" alt="icono-de-menu" id="icono-hamburguesa">
+        </button>
+            <nav class="abrir">
+                <button id="boton-cierre" onclick="cerrarMenu()">
+                    <i id="icono-de-cierre" class="fa-regular fa-circle-xmark"></i>
+                </button>            
+                 <ul id="menu-con-nombres">
+                    <li class="li-link"><a href="#somos-argenMTB" onclick="cerrarMenu()" class="a-link">Quien somos</a></li>
+                    <li class="li-link"><a href="#nuestros-servicios" onclick="cerrarMenu()" class="a-link">Servicios</a></li>
+                    <li class="li-link"><a href="#escribinos" onclick="cerrarMenu()" class="a-link">Contactanos</a></li>
+                  </ul>
+            </nav>
     </header>
-    <section class="seccion-biografia" id="soy-gordon">
+    <section id="seccion-bienvenida">
+        <h1 id="titulo-de-bienvenida">Bienvenidos a nuesto landing page</h1>
+        <h2 id="subtitulo">Los mejores de Argentina en mountain biking</h2>
+    </section>
+    <section class="seccion-biografia" id="somos-argenMTB">
         <div class="presentacion">
             <h2 class="soy-gordon">somos ARGEN MTB</h2>
             <p class="biografia">Nosotros somos Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla dui quam, sollicitudin at enim id, sodales vehicula velit. Aenean lobortis posuere tristique. Phasellus placerat arcu elementum nisi ultrices cursus. Etiam sit amet aliquet lacus. Integer ut iaculis augue, sit amet tincidunt ex. In eleifend justo et sodales semper. Mauris nec tortor lectus. Curabitur nec ultricies dolor.</p>
         </div>
             <img src="./imagenes/ciclistas-biografia.jpg" alt="ciclistas-practicando" id="ciclistas-imagen">
     </section>
-    <section class="seccion-servicios" id="mis-servicios">
+    <section class="seccion-servicios" id="nuestros-servicios">
         <h2 class="mis-servicios">Mis servicios</h2>
         <div class="contenedor-servicios">
             <div class="servicio">
@@ -53,7 +61,7 @@
         </div>
 
     </section>
-    <section class="formulario" id="escribime">
+    <section class="formulario" id="escribinos">
         <h2 class="titulo-formulario">Escribime</h2>
         <div class="contenedor-interactivos">
             <div class="fieldset">
@@ -88,6 +96,6 @@
             </div>
         </div>
     </footer>
-    <script src="main.js"></script>
+    <script src="./main.js"></script>
 </body>
 </html>
