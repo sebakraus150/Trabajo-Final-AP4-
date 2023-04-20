@@ -3,6 +3,7 @@
     margin: 0;
     box-sizing: border-box;
     scroll-behavior: smooth;
+    font-family: "roboto";
 }
 .no-scroll{
     overflow: hidden;
@@ -217,8 +218,7 @@ nav{
 }
 @media (min-width: 769px){
     .somos-argenMTB{
-        margin:0 0 20px 90px;
-        text-align: start;
+        font-size: 5vh;
     }
 }
 
@@ -432,6 +432,9 @@ nav{
         grid-template-rows: 1fr;
         justify-content: center;
     }
+}
+.contenedor-interactivos{
+    width: 100%;
 }
 .cajas-formulario{
     display: flex;

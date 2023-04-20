@@ -1,3 +1,6 @@
+//
+// Menu responsive
+//
 function abrirMenu() {
   var nav = $("nav").eq(0);
   var botonCierre = $("#boton-cierre");
@@ -40,6 +43,8 @@ function cerrarMenu() {
   $("body").removeClass("no-scroll");
   $(document).off("keydown");
 }
+
+// Formulario de contacto
 
 $(function () {
   $("#formulario-contacto").validate({
@@ -102,6 +107,8 @@ $(function () {
     },
   });
 });
+
+// Formulario de proceso
 
 $("#formulario-de-proceso").validate({
   rules: {

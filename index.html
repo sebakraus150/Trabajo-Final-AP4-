@@ -4,9 +4,12 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Argen MTB</title>
+        <title>ArgenMTB</title>
         <link rel="stylesheet" href="style.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+        <link rel="shortcut icon" type="image/png" href="./imagenes/logo.png">
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js" ></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/jquery.validate.min.js"></script>
         <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.min.js"></script>
@@ -32,12 +35,12 @@
             </nav>
     </header>
     <section id="seccion-bienvenida">
-        <h1 id="titulo-de-bienvenida">Bienvenidos a nuesto landing page</h1>
+        <h1 id="titulo-de-bienvenida">Bienvenidos al landing page de ArgenMTB</h1>
         <h2 id="subtitulo">Los mejores de Argentina en mountain biking</h2>
     </section>
     <section class="seccion-biografia" id="somos-argenMTB">
         <div class="presentacion">
-            <h2 class="somos-argenMTB">somos ARGEN MTB</h2>
+            <h2 class="somos-argenMTB">somos ArgenMTB</h2>
             <p class="biografia">Argen MTB nace de la ambiciosa idea tres compañeros amantes del ciclismo de montaña, pusieron en marcha su proyecto y lo hicieron crecer rápidamente. Hoy en día, Argen MTB es una empresa reconocida en el mundo del ciclismo de montaña, la numero uno en Argentina, ofreciendo servicios de alta calidad y un enfoque personalizado para cada cliente.</p>
         </div>
             <img src="./imagenes/ciclistas-biografia.jpg" alt="ciclistas-practicando" id="ciclistas-imagen">
@@ -83,7 +86,7 @@
         <div class="contenedor-interactivos">
             <div class="fieldset">
                 <label class="label" for="name">Nombre</label>
-                <input type="text" id="name" name="name" class="input"  placeholder="Nombre" required>
+                <input type="text" id="name" name="name" class="input" autocomplete="off" placeholder="Nombre" required>
             </div>
             <div class="fieldset">
                 <label class="label" for="email">Email</label>
@@ -101,7 +104,7 @@
         <div class="contenedor-interactivos">
             <div class="cajas-formulario">
                 <label for="nombre-usuario-proceso">Nombre:</label>
-            <input type="text" name="nombre-usuario-proceso" class="input" placeholder="Nombre" id="nombre-usuario-proceso" required>
+            <input type="text" name="nombre-usuario-proceso" class="input" placeholder="Nombre" autocomplete="off" id="nombre-usuario-proceso" required>
             </div>
             <div class="cajas-formulario">
                 <label for="nivel-curso">Nivel de la Clase:</label>
