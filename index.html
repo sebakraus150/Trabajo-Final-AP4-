@@ -7,7 +7,9 @@
         <title>Argen MTB</title>
         <link rel="stylesheet" href="style.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
-        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js" ></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/jquery.validate.min.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.min.js"></script>
         <script src="https://kit.fontawesome.com/6d0f0374c4.js" crossorigin="anonymous"></script>
 </head>
 <body>
@@ -25,7 +27,7 @@
                  <ul id="menu-con-nombres">
                     <li class="li-link"><a href="#somos-argenMTB" onclick="cerrarMenu()" class="a-link">Quien somos</a></li>
                     <li class="li-link"><a href="#nuestros-servicios" onclick="cerrarMenu()" class="a-link">Servicios</a></li>
-                    <li class="li-link"><a href="#escribinos" onclick="cerrarMenu()" class="a-link">Contactanos</a></li>
+                    <li class="li-link"><a href="#formulario-contacto" onclick="cerrarMenu()" class="a-link">Contactanos</a></li>
                   </ul>
             </nav>
     </header>
@@ -35,65 +37,117 @@
     </section>
     <section class="seccion-biografia" id="somos-argenMTB">
         <div class="presentacion">
-            <h2 class="soy-gordon">somos ARGEN MTB</h2>
-            <p class="biografia">Nosotros somos Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla dui quam, sollicitudin at enim id, sodales vehicula velit. Aenean lobortis posuere tristique. Phasellus placerat arcu elementum nisi ultrices cursus. Etiam sit amet aliquet lacus. Integer ut iaculis augue, sit amet tincidunt ex. In eleifend justo et sodales semper. Mauris nec tortor lectus. Curabitur nec ultricies dolor.</p>
+            <h2 class="somos-argenMTB">somos ARGEN MTB</h2>
+            <p class="biografia">Argen MTB nace de la ambiciosa idea tres compañeros amantes del ciclismo de montaña, pusieron en marcha su proyecto y lo hicieron crecer rápidamente. Hoy en día, Argen MTB es una empresa reconocida en el mundo del ciclismo de montaña, la numero uno en Argentina, ofreciendo servicios de alta calidad y un enfoque personalizado para cada cliente.</p>
         </div>
             <img src="./imagenes/ciclistas-biografia.jpg" alt="ciclistas-practicando" id="ciclistas-imagen">
     </section>
     <section class="seccion-servicios" id="nuestros-servicios">
-        <h2 class="mis-servicios">Mis servicios</h2>
+        <h2 class="mis-servicios">Nuestros servicios</h2>
         <div class="contenedor-servicios">
             <div class="servicio">
-                 <!-- aca va una imagen de un servicio-->
-                <h3 class="titulo-cosas">Hago Cosas</h3>
-                <p class="parrafo-de-cosas">Algo interesante sobre mi Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla dui quam, sollicitudin at enim id, sodales vehicula velit. Aenean lobortis posuere tristique.</p>
+                <h3 class="titulo-cosas">Cursos de mountain biking:</h3>
+                <p class="parrafo-de-cosas">Argen MTB ofrece cursos de mountain biking para principiantes y expertos, así como clases particulares personalizadas. El curso básico para principiantes cubre técnicas de conducción, seguridad en el camino y mantenimiento de bicicletas, mientras que el curso avanzado para expertos se enfoca en técnicas avanzadas de conducción, estrategias de competencia y entrenamiento especializado. Las clases particulares ofrecen un enfoque personalizado y adaptado a las necesidades específicas de cada persona</p>
+                <img src="./imagenes/cursos.jpg" alt="imagen-de-cursos" class="imagenen-de-servicio">
             </div>
             <div class="servicio">
-                 <!-- aca va una imagen de un servicio-->
-                <h3 class="titulo-cosas">Y más cosas</h3>
-                <p class="parrafo-de-cosas">Algo interesante sobre mi Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla dui quam, sollicitudin at enim id, sodales vehicula velit. Aenean lobortis posuere tristique.</p>
+                <h3 class="titulo-cosas">Eventos de mountain biking:</h3>
+                <p class="parrafo-de-cosas">Ofrecemos tours de mountain biking: un tour de un día con bicicletas de alta calidad, guías expertos y almuerzo en el camino, y un tour de fin de semana con alojamiento, cena, desayuno y transporte de bicicletas. También ofrecemos un tour internacional de una semana en lugares impresionantes y una carrera anual patrocinada por marcas de bicicletas de renombre. Además, realizamos una exhibición de bicicletas y accesorios donde los clientes pueden conocer las últimas novedades y probar los productos.</p>
+                <img src="./imagenes/tours.jpg" alt="imagen-de-eventos" class="imagenen-de-servicio"> 
             </div>
             <div class="servicio">
-                 <!-- aca va una imagen de un servicio-->
-                <h3 class="titulo-cosas">Y también otras cosas</h3>
-                <p class="parrafo-de-cosas">Algo interesante sobre mi Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla dui quam, sollicitudin at enim id, sodales vehicula velit. Aenean lobortis posuere tristique.</p>
+                <h3 class="titulo-cosas">Venta de bicicletas:</h3>
+                <p class="parrafo-de-cosas">Venta de bicicletas de montaña de alta calidad y marcas reconocidas, asesoría personalizada para ayudar a los clientes a elegir la mejor opción. Servicio de mantenimiento y reparación de bicicletas para mantenerlas en óptimas condiciones. Personalización de bicicletas para darle un toque único. Venta de accesorios y equipamiento para ciclistas, incluyendo elementos de protección y gafas de sol de diferentes marcas y estilos. </p>
+                <img src="./imagenes/ventas.jpg" alt="imagen-de-ventas" class="imagenen-de-servicio">
             </div>
         </div>
-
+    <section class="equipo" id="equipo">
+            <h2> ¡Nuestro Equipo!</h2>
+        <div class="team-container">
+            <div class="team-member">
+              <img src="imagenes/200px-Mii_hombre_Canal_Mii.png" alt="Persona 1" class="mii">
+              <span class="member-name">Sebastián Kraus / gerente del área ventas</span>
+            </div>
+            <div class="team-member">
+              <img src="imagenes/Mujer_mii.png" alt="Persona 2" class="mii">
+              <span class="member-name">Melina Campos / directora del área de turismo</span>
+            </div>
+            <div class="team-member">
+              <img src="imagenes/200px-Mii_hombre_Canal_Mii.png" alt="Persona 3" class="mii">
+              <span class="member-name">Axel Actis / director del departamento de enseñanzas</span>
+            </div>
+          </div>
     </section>
-    <section class="formulario" id="escribinos">
-        <h2 class="titulo-formulario">Escribime</h2>
+    <form class="formulario" id="formulario-contacto">
+        <h2 class="titulo-formulario">¿Necesitas ayuda? ¡Contactanos!</h2>
         <div class="contenedor-interactivos">
             <div class="fieldset">
-                <label class="label" for="name">NOMBRE</label>
-                <input type="text" id="name" class="input">
+                <label class="label" for="name">Nombre</label>
+                <input type="text" id="name" name="name" class="input"  placeholder="Nombre" required>
             </div>
             <div class="fieldset">
-                <label class="label" for="email">EMAIL</label>
-                <input type="email" id="email" class="input">
+                <label class="label" for="email">Email</label>
+                <input type="email" id="email" name="email" class="input"  placeholder="e-mail" required>
             </div>
             <div class="fieldset">
                 <label class="label" for="message">Mensaje</label>
-                <textarea id="message" class="textarea"></textarea>
+                <textarea type="text" id="message" name="message" class="textarea" placeholder="Mensaje" required></textarea>
             </div>
-            <button class="boton-envio">Enviar</button>
+            <input type="submit" value="Enviar" class="boton-envio">
         </div>
-    </section>
+    </form>
+    <form class="formulario" id="formulario-de-proceso">
+        <h2 class="titulo-formulario">¡Anotate tu curso ideal!</h2>
+        <div class="contenedor-interactivos">
+            <div class="cajas-formulario">
+                <label for="nombre-usuario-proceso">Nombre:</label>
+            <input type="text" name="nombre-usuario-proceso" class="input" placeholder="Nombre" id="nombre-usuario-proceso" required>
+            </div>
+            <div class="cajas-formulario">
+                <label for="nivel-curso">Nivel de la Clase:</label>
+                <select name="nivel-curso" class="input" id="nivel-curso" required>
+                    <option value="">Seleccione un Nivel</option>
+                    <option value="principiante">Principiante ($200)</option>
+                    <option value="intermedio">Intermedio ($300)</option>
+                    <option value="avanzado">Avanzado ($400)</option>
+                    <option value="profesional">Profesional ($500)</option>
+                </select>
+            </div>
+            <div class="cajas-formulario">
+                <label for="cantidad-personas-curso">¿Cuántas personas son?</label>
+                <input type="number" class="input" name="cantidad-personas" placeholder="Cantidad de personas" id="cantidad-personas-curso" min="1" max="10" required>
+            </div>
+            <div class="cajas-formulario">
+                <button id="envio-proceso" type="submit">Enviar</button>
+            </div>
+        </div>
+	</form>
+
     <footer class="footer">
-        <div class="logo-final">
-            <img src="./imagenes/logo.png" alt="logo-de-la-empresaa" class="logo-footer">
-            <p class="derechos-de-autor"> © 2023 Argen MTB</p>
-        </div>
+        <a href="#header" id="a-footer">
+                <img src="./imagenes/logo.png" alt="logo-de-la-empresaa" class="logo-footer">
+                <p class="derechos-de-autor"> © 2023 Argen MTB</p>
+        </a>
         <div class="redes">
-            <div class="logo-y-nombre">
-                 <!-- aca va un link y red-->
-            </div>
-            <div class="logo-y-nombre">
-                 <!-- aca va un link y red-->
-            </div>
-            <div class="logo-y-nombre">
-                <!-- aca va un link y red-->
-            </div>
+            <a href="https://github.com/sebakraus150" target="_blank" class="redes">
+                <div class="caja-integrante">
+                    <i class="fa-brands fa-github" style="color: #000000;"></i>
+                    <p class="integrante">Seba</p>
+                </div>
+            </a>
+            <a href="https://github.com/MelinaCampos11 "  target="_blank" class="redes">
+                <div class="caja-integrante">
+                    <i class="fa-brands fa-github" style="color: #000000;"></i>
+                    <p class="integrante">Melina</p>
+                </div>
+            </a>
+            <a href="https://github.com/axelpip3" target="_blank" class="redes">
+                <div class="caja-integrante">
+                    <i class="fa-brands fa-github" style="color: #000000;"></i>
+                    <p class="integrante">Axel</p>
+                </div>
+            </a>
+            
         </div>
     </footer>
     <script src="./main.js"></script>

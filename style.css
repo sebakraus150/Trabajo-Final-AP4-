@@ -14,6 +14,13 @@
     justify-content: space-between;
     align-items: center;
 }
+@media (min-width: 769px) {
+    #header{
+      
+        padding: 1rem 0 1rem 1em;
+        
+    }
+}
 #boton-logo{
     background: none;
     border: none;
@@ -51,10 +58,12 @@ width: 5rem;
 nav{
     display: none;
 }
-@media (min-width: 750px) {
+@media (min-width: 769px) {
     nav{
         display: flex;
-
+        
+        justify-content: space-around;
+        
     }
 }
 .nav{
@@ -70,13 +79,14 @@ nav{
     /*cambiar esto */
     width: 60%;
 }
-@media (min-width: 750px) {
+@media (min-width: 769px) {
     .nav{
         display: flex;
-
+        justify-content: space-between;
+        
     }
 }
-@media (min-width: 750px) {
+@media (min-width: 769px) {
     #boton-menu{
         display: none;
     }
@@ -88,31 +98,38 @@ nav{
     justify-content: center;
     list-style-type: none;
 }
-@media (min-width: 750px) {
+@media (min-width: 769px) {
     #menu-con-nombres{
         display: flex;
         justify-content: space-between;
         flex-direction: row;
-        width: 50vh;
+        width: 100%;
     }
 }
 .li-link{
     padding: 2rem 0;
     text-align: center;
 }
+@media (min-width: 769px) {
+    .li-link{
+        padding: 1rem;
+        margin: 1rem;
+        border: solid;
+        border-radius: 30px;
+        
+    }
+}
 .a-link{
-    width: 100%;
     text-decoration: none;
     font-size: 1.5rem;
     color: white;
     margin-top: 2rem;
 }
 
-@media (min-width: 750px) {
+@media (min-width: 769px) {
     .a-link{
-        width: 100%;
         text-decoration: none;
-        font-size: 1.5rem;
+        font-size: 3vh;
         color: black;
         margin-top: 2rem;
     }
@@ -159,16 +176,7 @@ nav{
         text-align: center;
     }
 }
-.gordon-freeman{
-    width: 318px;
-    height: 300px;
-}
-@media (min-width: 769px){
-    .gordon-freeman{
-        width: 435px;
-        height: 395px;
-    }
-}
+
 .seccion-biografia{
     width: 100%;
     display: flex;
@@ -200,7 +208,7 @@ nav{
     }
 }
     
-.soy-gordon{
+.somos-argenMTB{
     margin: 0;
     text-align: center;
     font-size: 32px;
@@ -208,7 +216,7 @@ nav{
     color: orangered
 }
 @media (min-width: 769px){
-    .soy-gordon{
+    .somos-argenMTB{
         margin:0 0 20px 90px;
         text-align: start;
     }
@@ -233,8 +241,10 @@ nav{
 }
 @media (min-width: 769px){
     .seccion-servicios{
-        height: 604px;
         padding: 0;
+        width: 100%;
+        height: 50vh;
+
     }
 }
 
@@ -259,7 +269,8 @@ nav{
     .contenedor-servicios{
         display: flex;
         flex-direction: row;
-        align-items: center;
+        align-items: start;
+        justify-content: space-around;
     }
 }
 .servicio{
@@ -270,13 +281,73 @@ nav{
     text-align: center;
     padding: 55.5px 57px;
 }
+@media (min-width: 769px){
+    .servicio{
+        padding: 0;
+        width: 20%;
+    }
+}
+
 .titulo-cosas{
     font-weight: 700;
     font-size: 24px;
 }
-.logo-lambda{
-    width: 110px;
-    height: 110px;
+
+.team-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+@media (min-width: 769px){
+    .team-container {
+        justify-content: center;
+        flex-direction: row;
+        max-width: 100vw;
+      }
+}
+.team-member {
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+  }
+  @media (min-width: 769px){
+    .team-member {
+        position: relative;
+        max-width: 1200px;
+    }
+}
+.mii{
+    height: 50vh;
+}
+  
+.member-name {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    padding: 5px;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 1rem;
+    display: none;
+  }
+  
+.team-member:hover .member-name {
+    display: block;
+  }
+
+.equipo h2{
+    font-family: "Roboto";
+    font-size: 48px;
+    text-align: center;
+}
+.imagenen-de-servicio{
+    width: 20vh;
+    margin-top: 10vh;
+    border: solid;
+    border-radius: 5px;
 }
 .formulario{
     color: white;
@@ -345,27 +416,84 @@ nav{
         width: 50%;
     }
 }
+#formulario-de-proceso{
+    background-color: #fff;
+    color: #272727;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 20px 20px;
+}
+@media (min-width: 769px){
+    #formulario-de-proceso{
+        display: grid;
+        grid-template-columns: 45% 55%;
+        grid-template-rows: 1fr;
+        justify-content: center;
+    }
+}
+.cajas-formulario{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 8vh;
+    margin-bottom: 2vh;
+}
+#nombre-usuario-proceso, #nivel-curso, #cantidad-personas-curso{
+    height: 100%;
+    border: solid;
+    border-radius: 7px;
+}
+#envio-proceso{
+    height: 5vh;
+    margin: 0 auto;
+    width: 50%;
+    background-color:aliceblue;
+    border: solid ;
+    border-radius: 1vh;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+}
+@media (min-width: 769px){
+    #envio-proceso{
+       margin: 0;
+       min-width: 300px;
+       width: 50%;
+    }
+}
+.cajas-formulario label{
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    padding-bottom:1vh;
+}
 .footer{
     background-color: #eeee;
-    height: 493px;;
-    padding-left: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
 }
 @media (min-width: 769px){
     .footer{
-        background: none;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
+       flex-direction: row;
+       padding: 2vh;
     }
 }
-.logo-final{
-    padding: 53px 0;
-    margin-bottom: 85px;
+
+
+#a-footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 5vh;
+    text-decoration: none;
 }
 @media (min-width: 769px){
-    .logo-final{
-      padding-left:100px;
-      margin: 0;
+    #a-footer{
+        padding: 0;
     }
 }
 .logo-footer{
@@ -383,5 +511,36 @@ nav{
     font-size: 13px;
 }
 .redes{
-    margin-right:12% ;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 3vh;
+    text-decoration: none;
+}
+@media (min-width: 769px){
+    .redes{
+        display: flex;
+        flex-direction: row;
+    }
+}
+.fa-github{
+    font-size: 5vh;
+}
+.integrante{
+    font-size: 3vh;
+    color: #272727;
+}
+.caja-integrante{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.derechos-de-autor{
+    color: #272727;
+}
+.error{
+    font-weight:800;
+    display: block;
+    color: #f00;
+    font-size: 14px;
 }
